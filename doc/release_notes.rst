@@ -24,6 +24,8 @@ Upcoming Release
   hydrogen fuel cell. Add switches for both re-electrification options under
   ``sector: hydrogen_turbine:`` and ``sector: hydrogen_fuel_cell:``.
 
+* Adapt equity constraint option (EQ) to sector-coupled networks.
+
 * Remove ``vresutils`` dependency.
 
 * Add option to include a piecewise linear approximation of transmission losses,
