@@ -47,6 +47,7 @@ dependencies:
 - pyxlsb
 - graphviz
 - gurobi
+- cffi
 
   # Keep in conda environment when calling ipython
 - ipython
