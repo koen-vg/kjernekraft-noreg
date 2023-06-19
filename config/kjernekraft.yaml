@@ -25,17 +25,110 @@ scenario:
   - c1.25
   - c1.5
   clusters:  # number of nodes in Europe, any integer between 37 (1 node per country-zone) and several hundred
-  # - 100
-  - 40
+  - 100
   opts: # only relevant for PyPSA-Eur
   - ''
   sector_opts: # this is where the main scenario settings are
-  - Co2L0-200SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.5
-  - Co2L0-200SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.6
-  - Co2L0-200SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.7
-  - Co2L0-200SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.8
-  - Co2L0-200SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.9
-  - Co2L0-200SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c
+  # Default
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.5
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.6
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.7
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.8
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.9
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c
+
+  # Low wind potential
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-onwind+p0.5-dist1-EQ0.9c-nuclear+c0.5
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-onwind+p0.5-dist1-EQ0.9c-nuclear+c0.6
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-onwind+p0.5-dist1-EQ0.9c-nuclear+c0.7
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-onwind+p0.5-dist1-EQ0.9c-nuclear+c0.8
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-onwind+p0.5-dist1-EQ0.9c-nuclear+c0.9
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-onwind+p0.5-dist1-EQ0.9c
+
+  # Low solar potential
+  - Co2L0-2000SEG-T-H-B-I-A-dist1-EQ0.9c-nuclear+c0.5
+  - Co2L0-2000SEG-T-H-B-I-A-dist1-EQ0.9c-nuclear+c0.6
+  - Co2L0-2000SEG-T-H-B-I-A-dist1-EQ0.9c-nuclear+c0.7
+  - Co2L0-2000SEG-T-H-B-I-A-dist1-EQ0.9c-nuclear+c0.8
+  - Co2L0-2000SEG-T-H-B-I-A-dist1-EQ0.9c-nuclear+c0.9
+  - Co2L0-2000SEG-T-H-B-I-A-dist1-EQ0.9c
+
+  # Expensive wind
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.5
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.6
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.7
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.8
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.9
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3
+
+  # Expensive solar
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.5
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.6
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.7
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.8
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.9
+  - Co2L0-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3
+
+  # Some emissions allowed
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.5
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.6
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.7
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.8
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.9
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.5
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.6
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.7
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.8
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.9
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.5
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.6
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.7
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.8
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.9
+  - Co2L0.05-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3
+
+  # Some more emissions allowed
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.5
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.6
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.7
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.8
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.9
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.5
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.6
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.7
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.8
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.9
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.5
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.6
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.7
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.8
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.9
+  - Co2L0.1-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3
+
+  # Some more emissions allowed
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.5
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.6
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.7
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.8
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-nuclear+c0.9
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.5
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.6
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.7
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.8
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3-nuclear+c0.9
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-onwind+c1.3-offwind+c1.3
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.5
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.6
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.7
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.8
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3-nuclear+c0.9
+  - Co2L0.15-2000SEG-T-H-B-I-A-solar+p3-dist1-EQ0.9c-solar+c1.3
+  
   planning_horizons:
   - 2050
 
@@ -611,6 +704,7 @@ solving:
 
   solver:
     name: gurobi
+    threads: 10
     options: gurobi-default
 
   solver_options:
@@ -627,7 +721,7 @@ solving:
       parallel: "on"
       random_seed: 123
     gurobi-default:
-      threads: 4
+      threads: 10
       method: 2 # barrier
       crossover: 0
       BarConvTol: 1.e-6
@@ -668,7 +762,8 @@ solving:
     cbc-default: {} # Used in CI
     glpk-default: {} # Used in CI
 
-  mem: 30000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
+  mem: 130000 #memory in MB; 20 GB enough for 50+B+I+H2; 100 GB for 181+B+I+H2
+  runtime: 7200 # In minutes; 5 days
 
 
 plotting:
@@ -877,6 +972,7 @@ plotting:
     H2 liquefaction: '#d647bd'
     hydrogen storage: '#bf13a0'
     H2 storage: '#bf13a0'
+    H2 Store: '#bf13a0'
     land transport fuel cell: '#6b3161'
     H2 pipeline: '#f081dc'
     H2 pipeline retrofitted: '#ba99b5'
