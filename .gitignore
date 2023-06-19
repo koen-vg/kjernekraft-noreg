@@ -16,9 +16,10 @@ gurobi.log
 /networks
 /benchmarks
 /logs
-/notebooks
 /data
 /cutouts
+
+!/results/kjernekraft/maps
 
 doc/_build
 
