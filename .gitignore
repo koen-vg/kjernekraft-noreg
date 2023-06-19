@@ -12,14 +12,11 @@ gurobi.log
 /bak
 /resources
 /resources*
-/results
 /networks
 /benchmarks
 /logs
 /data
 /cutouts
-
-!/results/kjernekraft/maps
 
 doc/_build
 
@@ -68,8 +65,6 @@ doc/_build
 *.xls
 
 *.geojson
-
-*.ipynb
 
 data/costs_*
 
