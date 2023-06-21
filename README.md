@@ -10,7 +10,7 @@ På denne sida finner du resultata av 168 optimaliseringar av modellen, med ulik
 - Karbongrense på 0%, 5%, 10% og 15% av 1990-nivået.
 
 Vi ser at kjernekraft ikkje blir satsa på i betydeleg grad i nokon av scenarioa med basis-kostad, og i Noreg må kostnaden på kjernekraft halverast før det lønnar seg:
-![png](graphics/analyse_9_2.png)
+![png](graphics/analyse_10_2.png)
 
 Resten av denne fila inneheld ein litt meir utdjupande analyse av resultata. Dette er ein konvertering av Jupyter notebooken [notebooks/analyse.ipynb](notebooks/analyse.ipynb) til Markdown, notebooken kan du sjølv køyra for å sjå på resultata i meir detalj.
 
