@@ -31,7 +31,11 @@ rule solve_sector_network:
     threads: config["solving"]["solver"].get("threads", 4)
     resources:
         mem_mb=config["solving"]["mem"],
-        runtime=config["solving"]["runtime"],
+        runtime=(
+            lambda _: config["solving"]["runtime"]
+            if "runtime" in config["solving"]
+            else None
+        ),
     benchmark:
         (
             RESULTS
